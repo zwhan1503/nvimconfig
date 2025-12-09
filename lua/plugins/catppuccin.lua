@@ -4,7 +4,7 @@ return {
 	priority = 1000,
 	opts = {
 		transparent_background = true,
-		integrations = { telescope = true },
+		integrations = { telescope = true, bufferline = true },
 	},
 	config = function(_, opts)
 		require("catppuccin").setup(opts)
