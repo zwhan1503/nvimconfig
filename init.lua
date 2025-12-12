@@ -11,6 +11,11 @@ vim.g.localmapleader = " "
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+-- Disable swapfiles
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.writebackup = false
+
 vim.opt.laststatus = 3
 vim.opt.autochdir = true
 vim.opt.cursorline = true
