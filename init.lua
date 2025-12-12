@@ -22,12 +22,23 @@ vim.opt.cursorline = true
 vim.opt.wrap = false
 vim.opt.linebreak = true
 vim.opt.autoindent = true
-vim.opt.termguicolors = true
-vim.opt.scrolloff = 5 -- Lines to keep above/below cursor
 
 -- Vim Splits
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+
+-- Visual Settings
+vim.opt.termguicolors = true
+vim.opt.scrolloff = 5 -- Lines to keep above/below cursor
+vim.opt.showmatch = true
+
+-- Search Settings
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
+-- Better indenting in visual Mode
+vim.keymap.set("v", "<", "<gv", {desc = "Indent left and reselect"})
+vim.keymap.set("v", ">", ">gv", {desc = "Indent right and reselect"})
 
 vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "none" })
 vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "none" })
