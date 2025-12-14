@@ -17,7 +17,7 @@ vim.opt.backup = false
 vim.opt.writebackup = false
 
 vim.opt.laststatus = 3
-vim.opt.autochdir = true
+vim.opt.autochdir = false
 vim.opt.cursorline = true
 vim.opt.wrap = false
 vim.opt.linebreak = true
