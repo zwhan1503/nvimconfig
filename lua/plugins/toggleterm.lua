@@ -22,12 +22,17 @@ return {
 			-- Compile and Run C++ file
 			vim.keymap.set("n", "<F5>", function()
 				if vim.bo.filetype == "cpp" then
-					local current_file = vim.fn.expand("%: t") -- Gets "main.cpp"
+					local current_file = vim.fn.expand("%:p") -- Gets the full path
 					local basename = vim.fn.expand("%:t:r") -- Gets "main"
 					local file_dir = vim.fn.expand("%:p:h") -- Gets directory
+					local output_path = file_dir .. "/" .. basename -- Full path to output
 
-					local cmd =
-						string.format("g++ -std=c++17 -O2 -Wall %s -o %s && ./%s", current_file, basename, basename)
+					local cmd = string.format(
+						"g++ -std=c++17 -O2 -Wall '%s' -o '%s' && '%s'",
+						current_file,
+						output_path,
+						output_path
+					)
 
 					local cpp_terminal = Terminal:new({
 						cmd = cmd,
