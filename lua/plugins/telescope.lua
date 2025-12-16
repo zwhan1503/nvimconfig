@@ -8,9 +8,21 @@ return {
 		},
 		config = function()
 			require("telescope").setup({
+				defaults = {
+					layout_strategy = "horizontal",
+					layout_config = {
+						horizontal = {
+							preview_width = 0.7,
+							width = 0.9,
+							height = 0.9,
+						},
+					},
+				},
 				pickers = {
 					find_files = {
-						theme = "ivy",
+						layout_config = {
+							preview_width = 0.7,
+						},
 					},
 				},
 				extensions = {
