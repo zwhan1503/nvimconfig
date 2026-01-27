@@ -30,6 +30,7 @@ return {
 					},
 					{ desc = " New file", action = "enew", key = "n" },
 				},
+				mru = { enable = true, limit = 10, icon = " ", cwd_only = true },
 				packages = { enable = false },
 				project = { enable = false },
 				footer = {},
