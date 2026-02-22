@@ -24,7 +24,7 @@ return {
 
             --== Diagnostics
 			vim.diagnostic.config({
-				underline = false,
+				underline = true,
 				virtual_text = {
 					spacing = 2,
 					prefix = "●",
