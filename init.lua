@@ -22,6 +22,12 @@ vim.opt.cursorline = true
 vim.opt.wrap = false
 vim.opt.linebreak = true
 vim.opt.autoindent = true
+vim.opt.smartindent = true
+
+-- Folding
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()" -- uses treesitter for folding
+vim.opt.foldlevel = 99 -- start with all folds open
 
 -- Vim Splits
 vim.opt.splitright = true
