@@ -22,26 +22,6 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-            --== Diagnostics
-			vim.diagnostic.config({
-				underline = true,
-				virtual_text = {
-					spacing = 2,
-					prefix = "●",
-				},
-				update_in_insert = false,
-				severity_sort = true,
-				signs = {
-					text = {
-						-- Alas nerdfont icons don't render properly on Medium!
-						[vim.diagnostic.severity.ERROR] = " ",
-						[vim.diagnostic.severity.WARN] = " ",
-						[vim.diagnostic.severity.HINT] = " ",
-						[vim.diagnostic.severity.INFO] = " ",
-					},
-				},
-			})
-
 			--== Lua
 			vim.lsp.cmd = { "/usr/bin/lua-language-server" } --Mason lua_ls is old -> use system
 			vim.lsp.config["lua_ls"] = {

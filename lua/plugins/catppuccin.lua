@@ -3,10 +3,21 @@ return {
 	name = "catppuccin",
 	priority = 1000,
 	opts = {
+		lsp_styles = {
+			underlines = {
+				errors = { "undercurl" },
+				hints = { "undercurl" },
+				warnings = { "undercurl" },
+				information = { "undercurl" },
+			},
+		},
 		transparent_background = true,
 		integrations = {
 			telescope = true,
 			bufferline = true,
+            dashboard = true,
+            mason = true,
+            treesitter_context = true,
 			nui = true, -- pop ups configure
 		},
 		custom_highlights = function(colors)
