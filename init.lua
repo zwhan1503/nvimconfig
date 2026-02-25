@@ -64,6 +64,13 @@ vim.keymap.set("n", "<leader>da", "ggVGd", { desc = "Reset All" })
 -- Bind to copy to clipboard easy
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y')
 
+-- Copies the whole file to clipboard
+vim.keymap.set("n", "<leader>ya", function()
+	local pos = vim.api.nvim_win_get_cursor(0) -- get current cursor pos
+	vim.cmd('normal! gg"+yG') -- yank entire file
+	vim.api.nvim_win_set_cursor(0, pos) -- return to original pos
+end)
+
 -- Moving in Insert Mode
 vim.keymap.set("i", "<C-k>", "<Up>")
 vim.keymap.set("i", "<C-j>", "<Down>")
