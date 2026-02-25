@@ -13,7 +13,11 @@ return {
 						"--fast",
 					},
 				}),
-                null_ls.builtins.formatting.google_java_format,
+				null_ls.builtins.formatting.google_java_format.with({
+					extra_args = {
+						"--style={IndentWidth: 4}",
+					},
+				}),
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.prettier,
 				null_ls.builtins.formatting.clang_format.with({
