@@ -13,6 +13,7 @@ return {
 					"ts_ls",
 					"html",
 					"cssls",
+					"tinymist",
 				},
 			})
 		end,
@@ -66,6 +67,11 @@ return {
 				capabilities = capabilities,
 			}
 			vim.lsp.enable("basedpyright")
+
+			vim.lsp.config["tinymist"] = {
+				capabilities = capabilities,
+			}
+			vim.lsp.enable("tinymist")
 
 			--== Keymaps
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show document" })

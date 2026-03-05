@@ -20,6 +20,7 @@ return {
 				"vimdoc",
 				"html",
 				"css",
+                "typst",
 			},
 			highlight = { enable = true },
 			indent = { enable = true },
