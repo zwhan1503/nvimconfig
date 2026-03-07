@@ -68,10 +68,24 @@ return {
 			}
 			vim.lsp.enable("basedpyright")
 
+            --== Typst
 			vim.lsp.config["tinymist"] = {
 				capabilities = capabilities,
 			}
 			vim.lsp.enable("tinymist")
+
+            -- Typst filetyep settings
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = "typst",
+				callback = function()
+                    -- Disable broken treesitter indent (see in treesitter.lua)
+					vim.opt_local.indentexpr = ""
+					vim.opt_local.autoindent = true
+					vim.opt_local.tabstop = 2
+					vim.opt_local.shiftwidth = 2
+					vim.opt_local.expandtab = true
+				end,
+			})
 
 			--== Keymaps
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show document" })

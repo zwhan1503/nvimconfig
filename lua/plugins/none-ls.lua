@@ -20,6 +20,7 @@ return {
 				}),
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.prettier,
+				null_ls.builtins.formatting.typstyle,
 				null_ls.builtins.formatting.clang_format.with({
 					filetypes = { "c", "cpp" },
 					extra_args = {

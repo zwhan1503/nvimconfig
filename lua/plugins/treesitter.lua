@@ -20,10 +20,13 @@ return {
 				"vimdoc",
 				"html",
 				"css",
-                "typst",
+				"typst",
 			},
 			highlight = { enable = true },
-			indent = { enable = true },
+			indent = {
+				enable = true,
+				disable = { "typst" }, -- indent is broken see on https://github.com/nvim-treesitter/nvim-treesitter/issues/7815
+			},
 		})
 	end,
 }
