@@ -35,7 +35,7 @@ return {
 			'#set text(font: "TeX Gyre Pagella", size: 13pt)',
 			"",
 			"// Heading settings",
-			'#set heading(numbering: "1.")',
+			'#set heading(numbering: "I.1.")',
 			"#show heading: it => {",
 			"  set par(first-line-indent: (amount: 0pt, all: true))",
 			"  v(0.25em)",
