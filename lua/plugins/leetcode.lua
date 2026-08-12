@@ -11,7 +11,7 @@ return {
 	},
 	opts = {
 		lang = "cpp",
-		image_support = true,
+		image_support = false,
 		injector = {
 			["cpp"] = {
 				imports = function()

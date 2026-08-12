@@ -12,12 +12,15 @@ return {
 			columns = {
 				"icon",
 			},
-			view_option = {
+			view_options = {
 				show_hidden = true,
 				natural_order = true,
-				is_always_hidden = function(name, _)
+			    is_always_hidden = function(name, _)
 					return name == ".." or name == ".git"
 				end,
+			},
+			keymap = {
+				["g."] = { "actions.toggle_hidden", mode = "n" },
 			},
 			windows = {
 				wrap = true,

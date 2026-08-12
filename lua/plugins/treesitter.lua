@@ -4,9 +4,27 @@ return {
 	lazy = false,
 	build = ":TSUpdate",
 	config = function()
-		local config = require("nvim-treesitter.configs")
-		config.setup({
-			ensure_installed = {
+		-- Install parsers
+		require("nvim-treesitter").install({
+			"lua",
+			"java",
+			"javascript",
+			"typescript",
+			"tsx",
+			"python",
+			"c",
+			"cpp",
+			"markdown",
+			"vim",
+			"vimdoc",
+			"html",
+			"css",
+			"typst",
+		})
+
+		-- Highlighting
+		vim.api.nvim_create_autocmd("FileType", {
+			pattern = {
 				"lua",
 				"java",
 				"javascript",
@@ -17,16 +35,13 @@ return {
 				"cpp",
 				"markdown",
 				"vim",
-				"vimdoc",
 				"html",
 				"css",
-				"typst",
 			},
-			highlight = { enable = true },
-			indent = {
-				enable = true,
-				disable = { "typst" }, -- indent is broken see on https://github.com/nvim-treesitter/nvim-treesitter/issues/7815
-			},
+			callback = function()
+				vim.treesitter.start()
+				vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+			end,
 		})
 	end,
 }

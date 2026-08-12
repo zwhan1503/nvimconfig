@@ -88,6 +88,7 @@ vim.keymap.set("n", "<A-c>", "<CMD>bdelete<CR>") -- Close current buffer
 
 -- Windows Splitting
 vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split windows vertiacally" })
+vim.keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split windows horizontally" })
 vim.keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make the splits equal size" })
 
 -- Windows Navigation
