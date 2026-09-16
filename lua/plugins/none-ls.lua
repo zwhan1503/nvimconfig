@@ -24,7 +24,7 @@ return {
 				null_ls.builtins.formatting.clang_format.with({
 					filetypes = { "c", "cpp" },
 					extra_args = {
-						"--style={BasedOnStyle: LLVM, IndentWidth: 4, BreakBeforeBraces: Allman, AllowShortBlocksOnASingleLine: false}",
+						"--style={BasedOnStyle: LLVM, IndentWidth: 4, BreakBeforeBraces: Attach, AllowShortBlocksOnASingleLine: false, AllowShortFunctionsOnASingleLine: Empty}",
 					},
 				}),
 				require("none-ls.diagnostics.eslint_d"),
