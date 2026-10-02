@@ -50,7 +50,7 @@ vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection down" 
 
 -- zz included movements
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- Better indenting in visual Mode
 vim.keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
