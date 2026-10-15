@@ -20,6 +20,9 @@ return {
 				end,
 			},
 		},
+        picker = {
+            provider = "telescope"
+        },
 		keys = {
 			run = "<leader>lr",
 			submit = "<leader>ls",
